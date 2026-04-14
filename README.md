@@ -2,6 +2,8 @@
 
 Este proyecto contiene la implementación de 23 patrones de diseño de software (GoF) en Java. Está configurado con Apache Maven para estandarizar la compilación y ejecución en entornos multiplataforma (Linux, Windows y macOS).
 
+[Guía para trabajar con git y github](GITHUB.md)
+
 ## Requisitos del Sistema
 
 * Java Development Kit (JDK) 18 o superior.
