@@ -42,7 +42,7 @@ El argumento proporcionado en la línea de comandos debe coincidir exactamente c
 ### Patrones Creacionales
 * `abstract-factory`
 * `builder`
-* `factory-method`
+* `factoryMethod`
 * `prototype`
 * `singleton`
 
@@ -56,7 +56,7 @@ El argumento proporcionado en la línea de comandos debe coincidir exactamente c
 * `proxy`
 
 ### Patrones de Comportamiento
-* `chain-of-responsibility`
+* `chainOfResponsibility`
 * `command`
 * `interpreter`
 * `iterator`
