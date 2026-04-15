@@ -16,7 +16,7 @@ public class App {
 
         for (String category : categories) {
             try {
-                String packageName = "design.patterns." + category + "." + input.toLowerCase().replace("-", "");
+                String packageName = "design.patterns." + category + "." + input.toLowerCase().replace("-", "").replace("_", "");
                 String fullPath = packageName + "." + className;
                 
                 Class<?> clazz = Class.forName(fullPath);
@@ -51,10 +51,17 @@ public class App {
 
     private static String toPascalCase(String input) {
         StringBuilder result = new StringBuilder();
-        for (String part : input.split("-")) {
-            if (!part.isEmpty()) {
-                result.append(Character.toUpperCase(part.charAt(0)))
-                      .append(part.substring(1).toLowerCase());
+        for (String part : input.split("[-_]")) {
+            if (part.isEmpty()) {
+                continue;
+            }
+            String[] subParts = part.split("(?<!^)(?=[A-Z])");
+            for (String subPart : subParts) {
+                if (subPart.isEmpty()) {
+                    continue;
+                }
+                result.append(Character.toUpperCase(subPart.charAt(0)))
+                      .append(subPart.substring(1).toLowerCase());
             }
         }
         return result.toString();
