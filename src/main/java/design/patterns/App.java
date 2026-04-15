@@ -16,7 +16,7 @@ public class App {
 
         for (String category : categories) {
             try {
-                String packageName = "design.patterns." + category + "." + input.replace("-", "");
+                String packageName = "design.patterns." + category + "." + input.toLowerCase().replace("-", "");
                 String fullPath = packageName + "." + className;
                 
                 Class<?> clazz = Class.forName(fullPath);
@@ -54,7 +54,7 @@ public class App {
         for (String part : input.split("-")) {
             if (!part.isEmpty()) {
                 result.append(Character.toUpperCase(part.charAt(0)))
-                      .append(part.substring(1));
+                      .append(part.substring(1).toLowerCase());
             }
         }
         return result.toString();
