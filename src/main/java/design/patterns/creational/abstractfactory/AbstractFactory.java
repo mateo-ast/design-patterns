@@ -5,7 +5,7 @@ import design.patterns.creational.abstractfactory.factoriaconcreta.CharmanderFac
 import design.patterns.creational.abstractfactory.factoriaconcreta.PikachuFactory;
 import design.patterns.creational.abstractfactory.cliente.Cliente;
 
-public class Abstractfactory implements DesignPattern {
+public class AbstractFactory implements DesignPattern {
     @Override
     public void run() {
         System.out.println("=== Usando CharmanderFactory ===");
@@ -21,6 +21,6 @@ public class Abstractfactory implements DesignPattern {
     }
     
     public static void main(String[] args) {
-        new Abstractfactory().run();
+        new AbstractFactory().run();
     }
 }
