@@ -2,7 +2,7 @@ package design.patterns.behavioral.chainofresponsibility;
 
 import design.patterns.DesignPattern;
 
-public class Chainofresponsibility implements DesignPattern {
+public class ChainOfResponsibility implements DesignPattern {
     
     @Override
     public void run() {
