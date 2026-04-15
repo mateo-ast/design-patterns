@@ -2,9 +2,9 @@ package design.patterns.behavioral.chainofresponsibility;
 
 public class Numbers {
     
-    private int number1;
-    private int number2;
-    private String calculationWanted;
+    private final int number1;
+    private final int number2;
+    private final String calculationWanted;
     
     public Numbers(int number1, int number2, String calculationWanted) {
         this.number1 = number1;
