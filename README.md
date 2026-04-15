@@ -7,7 +7,7 @@ Este proyecto contiene la implementación de 23 patrones de diseño de software 
 ## Requisitos del Sistema
 
 * Java Development Kit (JDK) 17 o superior.
-* Apache Maven 3.x.
+* [Apache Maven 3.x.](https://maven.apache.org/install.html)
 
 ## Compilación
 
