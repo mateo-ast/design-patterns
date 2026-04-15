@@ -13,8 +13,10 @@ public class AddNumbers implements Chain {
     public void calculate(Numbers request) {
         if ("add".equals(request.getCalculationWanted())) {
             System.out.println(request.getNumber1() + " + " + request.getNumber2() + " = " + (request.getNumber1() + request.getNumber2()));
-        } else {
+        } else if (nextInChain != null) {
             nextInChain.calculate(request);
+        } else {
+            System.out.println("Solo se pueden realizar las operaciones suma, resta, multiplicacion y division");
         }
     }
 
