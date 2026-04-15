@@ -15,6 +15,7 @@ public class DivideNumbers implements Chain {
             System.out.println(request.getNumber1() + " / " + request.getNumber2() + " = " + (request.getNumber1() / request.getNumber2()));
         } else {
             System.out.println("Solo se pueden realizar las operaciones suma, resta, multiplicacion y division");
+            nextInChain.calculate(request);
         }
     }
 

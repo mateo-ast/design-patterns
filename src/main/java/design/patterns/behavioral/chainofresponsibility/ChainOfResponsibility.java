@@ -18,7 +18,7 @@ public class Chainofresponsibility implements DesignPattern {
         mulChain.setNextChain(divChain);
         
         // Crea un objeto Numbers con los números y la operación deseada
-        Numbers request = new Numbers(4, 2, "subtract");
+        Numbers request = new Numbers(4, 2, "divide");
         
         // Envía la solicitud a la cadena
         addChain.calculate(request);
