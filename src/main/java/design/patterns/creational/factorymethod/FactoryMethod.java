@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 import design.patterns.DesignPattern;
 
-public class Factorymethod implements DesignPattern {
+public class FactoryMethod implements DesignPattern {
     
     @Override
     public void run() {
