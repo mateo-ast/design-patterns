@@ -1,4 +1,6 @@
+package design.patterns.behavioral.visitor;
 // Electrodoméstico: otro tipo de producto de la tienda.
+
 public class Electrodomestico implements Producto {
 
     private String nombre;

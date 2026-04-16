@@ -1,7 +1,9 @@
+package design.patterns.behavioral.visitor;
 // Este visitante aplica descuentos.
 // Implementa Visitante, entonces DEBE definir qué hace con cada producto.
 // La lógica de descuento está AQUÍ, no en los productos.
 // Si mañana cambian los descuentos, solo tocamos este archivo.
+
 public class VisitanteDescuento implements Visitante {
 
     // Cuando visita un Libro: 20% de descuento (los libros tienen buen descuento)

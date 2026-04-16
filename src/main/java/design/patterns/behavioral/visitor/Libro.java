@@ -1,5 +1,7 @@
+package design.patterns.behavioral.visitor;
 // Libro es un tipo de producto de la tienda.
 // Implementa la interfaz Producto, por lo tanto DEBE tener aceptar().
+
 public class Libro implements Producto {
 
     // El nombre del libro — atributo privado (encapsulamiento)

@@ -1,7 +1,9 @@
+package design.patterns.behavioral.visitor;
 // Este visitante calcula impuestos.
 // Es OTRA operación completamente distinta, pero los productos
 // no cambiaron ni una línea — solo agregamos este nuevo visitante.
 // Eso es la gran ventaja del patrón Visitor.
+
 public class VisitanteImpuesto implements Visitante {
 
     // Los libros están exentos de impuestos en muchos países

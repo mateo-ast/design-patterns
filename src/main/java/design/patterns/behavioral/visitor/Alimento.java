@@ -1,4 +1,6 @@
+package design.patterns.behavioral.visitor;
 // Alimento: el tercer tipo de producto.
+
 public class Alimento implements Producto {
 
     private String nombre;
