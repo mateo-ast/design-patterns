@@ -33,7 +33,7 @@ public class Pizza {
         // porque va armando la pizza internamente
         private Pizza pizza;
 
-        // Cuando creás el Builder, le das el tamaño obligatorio
+        // Cuando se crea el Builder, se le da el tamaño obligatorio
         // y se crea una pizza vacía lista para armar
         public PizzaBuilder(String tamaño) {
             pizza = new Pizza();         // Crea la pizza vacía
@@ -68,7 +68,7 @@ public class Pizza {
             return this;
         }
 
-        // Este es el método FINAL: cuando terminaste de agregar
+        // Este es el método FINAL: cuando se termina de agregar
         // ingredientes, llamás build() y te devuelve la pizza lista
         public Pizza build() {
             return pizza;

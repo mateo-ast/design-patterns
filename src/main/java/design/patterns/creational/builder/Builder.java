@@ -10,7 +10,7 @@ public class Builder implements DesignPattern {
     public void run() {
 
         // Construimos la pizza PASO A PASO usando el Builder
-        // Fijate cómo se encadenan los métodos uno tras otro
+        // Se encadenan los métodos uno tras otro
         Pizza pizza1 = new Pizza.PizzaBuilder("Grande")
                 .conMasa("Delgada")
                 .conSalsa("Tomate")
