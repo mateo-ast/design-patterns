@@ -8,13 +8,13 @@ import java.util.Stack;
 // No sabe qué hace cada comando internamente
 // ─────────────────────────────────────────────
 public class Mesero {
-    private final Stack<    Command> historial = new Stack<>();
+    private final Stack<    Comando> historial = new Stack<>();
 
     /** Ejecuta un comando y lo guarda para poder deshacerlo */
-    public void tomarOrden(Command Command) {
-        System.out.println("\n  → " + Command.descripcion());
-        Command.ejecutar();
-        historial.push(Command);
+    public void tomarOrden(Comando Comando) {
+        System.out.println("\n  → " + Comando.descripcion());
+        Comando.ejecutar();
+        historial.push(Comando);
     }
 
     /** Deshace el último comando ejecutado */
@@ -23,7 +23,7 @@ public class Mesero {
             System.out.println("\n  [Mesero] No hay órdenes para deshacer.");
             return;
         }
-        Command ultimo = historial.pop();
+        Comando ultimo = historial.pop();
         System.out.println("\n  ← Deshaciendo: " + ultimo.descripcion());
         ultimo.deshacer();
     }

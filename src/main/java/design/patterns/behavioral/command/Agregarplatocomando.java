@@ -3,7 +3,7 @@ package design.patterns.behavioral.command;
 // CONCRETE COMMAND — Agregar plato
 // Encapsula la acción de agregar un plato al pedido
 // ─────────────────────────────────────────────
-class AgregarPlatoComando implements Command {
+class AgregarPlatoComando implements Comando {
     private final cocina cocina;
     private final String plato;
 

@@ -4,7 +4,7 @@ package design.patterns.behavioral.command;
 // CONCRETE COMMAND — Cancelar plato
 // Encapsula la acción de quitar un plato del pedido
 // ─────────────────────────────────────────────
-class CancelarPlatoComando implements Command {
+class CancelarPlatoComando implements Comando {
     private final cocina cocina;
     private final String plato;
 
