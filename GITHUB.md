@@ -1,56 +1,32 @@
-# Flujo de Trabajo y Control de Versiones
+Flujo de Trabajo
 
-Para garantizar la estabilidad del código y evitar conflictos, este repositorio utiliza un flujo de trabajo basado en **Pull Requests (PR)**. 
+**1. Revisar las asignaciones y crear la rama** `🌐 En GitHub`
+* Diríjanse a la pestaña de **Issues** en el repositorio y abran la tarea asignada con el nombre de su patrón.
+* En la barra lateral derecha, bajo la sección "Development", hagan clic en **"Create a branch"**.
+* Dejen las opciones por defecto y hagan clic en **"Create branch"**. GitHub generará y vinculará la rama automáticamente (ej: `3-singleton`).
 
-La rama principal (`main`) está protegida. Ningún desarrollador puede enviar código (*push*) directamente a esta rama. Toda nueva implementación debe realizarse en una rama aislada y someterse a revisión antes de ser integrada.
+**2. Actualizar el repositorio local y bajar la rama** `💻 En VS Code (Terminal)`
+* Antes de comenzar a programar, asegúrense de actualizar la rama principal y luego descargar la rama que acaban de crear:
+  ```bash
+  git checkout main
+  git pull origin main
+  git fetch origin
+  git checkout nombre-de-la-rama
+  ```
 
-## 1. Sincronización Inicial
-Antes de comenzar a trabajar en un nuevo patrón, es obligatorio sincronizar el repositorio local con la versión más reciente del servidor para evitar conflictos de historial.
+**3. Desarrollo y Commits** `💻 En VS Code`
+* Escriban el código y realicen los commits necesarios a medida que avanzan (`git add .` y `git commit -m "mensaje descriptivo"`).
+* ⚠️ **IMPORTANTE:** No modifiquen la carpeta ni la clase que llevan el nombre del patrón para no romper la lógica de ejecución.
 
-```bash
-git checkout main
-git pull origin main
-```
+**4. Subir la rama al servidor** `💻 En VS Code (Terminal)`
+* Cuando el código del patrón esté terminado y probado, suban sus cambios a GitHub:
+  ```bash
+  git push origin nombre-de-la-rama
+  ```
 
-## 2. Creación de la Rama de Desarrollo
-Cree una nueva rama a partir de `main`. El nombre de la rama debe ser exactamente el nombre del patrón a implementar, escrito en formato `kebab-case` (minúsculas separadas por guiones).
+**5. Abrir el Pull Request (PR)** `🌐 En GitHub`
+* Ingresen a la página del repositorio en GitHub. Verán un botón que indica **"Compare & pull request"**. Hagan clic allí.
+* Creen el PR y notifiquen al equipo para que otro integrante pueda revisarlo y hacer la integración (merge) a `main`.
+* 🛑 **Regla clave:** Solo un integrante que no haya hecho el PR puede aprobarlo.
 
-```bash
-# Ejemplo para el patrón Singleton
-git checkout -b singleton
-```
-
-## 3. Desarrollo y Registro de Cambios (Commits)
-Implemente el código respetando las directrices de desarrollo (interfaz, nomenclatura y empaquetado). Una vez finalizado y probado localmente, registre los cambios. 
-
-Los mensajes de commit deben ser claros y descriptivos.
-
-```bash
-git add .
-git commit -m "Implementa el patrón Singleton y su prueba en consola"
-```
-
-## 4. Subida al Repositorio Remoto
-Envíe su rama local al servidor de GitHub. El modificador `-u` es necesario la primera vez para establecer el vínculo entre su rama local y la remota.
-
-```bash
-git push -u origin <nombre-de-la-rama>
-```
-
-## 5. Creación del Pull Request (Revisión de Código)
-La integración del código a la rama principal se gestiona exclusivamente a través de la interfaz web de GitHub:
-
-1. Ingrese a la página del repositorio en GitHub.
-2. Localice el aviso de su rama subida recientemente y haga clic en **Compare & pull request**.
-3. Verifique que la rama base sea `main` y la rama a comparar sea la suya.
-4. Asigne a un compañero de equipo como **Reviewer** (Revisor) en el panel lateral derecho.
-5. Haga clic en **Create pull request**.
-
-## 6. Aprobación y Fusión (Merge)
-El revisor asignado recibirá una notificación. Su responsabilidad es:
-1. Revisar los cambios en la pestaña **Files changed**.
-2. Solicitar correcciones mediante comentarios si el código no compila o no sigue las convenciones arquitectónicas del proyecto.
-3. Si el código es correcto, aprobar los cambios (*Approve*).
-4. Ejecutar la fusión haciendo clic en **Merge pull request**.
-
-Una vez que el código se ha fusionado exitosamente en `main`, la rama individual debe ser eliminada desde la plataforma web para mantener el repositorio limpio.
+Una vez que su código sea aprobado e integrado, vuelvan al **Paso 1** para comenzar con el siguiente patrón asignado.
